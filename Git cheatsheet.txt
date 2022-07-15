@@ -1,0 +1,98 @@
+clear//clear the terminal
+ls //list
+cd //open directory/creat directory
+code . //For open Visual Studio Code
+touch <NAME> //creat new blank file
+touch .gitignore //creat a file that can not tracked by git
+
+git config --global user.name <YOUR NAME>
+git config --global user.email <YOUR EMAIL>
+
+git config --global user.name 
+git config --global user.email
+
+git init //For Initialize
+ls -lart //see Headen folder
+
+git status
+git status -s//summarise status
+git log //about commit (Author, Date)
+git log -p -<HOW MANY COMMIT DO YOU WANT TO SEE> //(q for quit)
+
+git add <FILE NAME>//send file to Staged area
+git add -A//send all files to Staged area
+git commit//save
+git commit -m "Comments"
+git checkout <FILE NAME>//back to previous commit
+git checkout -f//back to previous commit for all
+git push//only push in same branch
+
+git commit -a -m "skipped staging area and fixed"//direct commit 
+git diff //comparing between working tree and staging area
+git diff --staged//comparing the staging area to last commit
+
+git rm <FILE NAME>//remove from working directory and staging area
+git rm --cached <FILE NAME>//Only remove from staging area
+
+git branch <BRANCH NAME>//creat a new branch
+git branch //see your branches
+git checkout -b <BRANCH NAME>//creat a new branch and switch to that branch
+git checkout <BRANCH NAME>//Switched to another branch 
+git push -u origin <BRANCH NAME>//push branch and also next time push in same branch
+
+git merge <BRANCH NAME>//merge branch to master branch
+
+git clone <ENTER THE URL> <FILE NAME WHERE CLONE FILE STORE>
+
+					--------------Hacks by Apna College-------------------
+1. To know about GitHub shortcut press the ' ? ' on GitHub website
+2. URL shortner (short the website address) website name ' git.io ' 
+3. To compare old and new version of your project click on BALME
+
+
+					--------------if you get this error-------------------
+					git@github.com: Permission denied (publickey).
+					fatal: Could not read from remote repository.
+
+					Please make sure you have the correct access rights
+					and the repository exists.
+---------solution-------------
+read this blog https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
+step 1:- Open git bash
+step 2:- Enter " ls -al ~/.ssh " to see if existing SSH keys are present
+	eg. total 23
+drwxr-xr-x 1 raviraj kumar 197121   0 Jan 18 20:54 ./
+drwxr-xr-x 1 raviraj kumar 197121   0 Jun 13 23:13 ../
+-rw-r--r-- 1 raviraj kumar 197121 464 Jan 18 20:37 id_ed25519
+-rw-r--r-- 1 raviraj kumar 197121 103 Jan 18 20:37 id_ed25519.pub
+-rw-r--r-- 1 raviraj kumar 197121 656 Jan 18 20:54 known_hosts
+-rw-r--r-- 1 raviraj kumar 197121  92 Jan 18 20:54 known_hosts.old
+this type of output you get....
+
+#	Tip: If you receive an error that ~/.ssh doesn't exist, you do not have an
+ 	existing SSH key pair in the default location.
+
+	You can create a new SSH key pair by using this text 
+	" ssh-keygen -t ed25519 -C "your_email@example.com" "
+
+output: Enter a file in which to save the key 
+	(/c/Users/you/.ssh/id_algorithm):[Press enter]
+
+output: Enter passphrase (empty for no passphrase): [Type a passphrase]
+	  Enter same passphrase again: [Type passphrase again]
+
+#	  start the ssh-agent in the background enter the text
+	  " $ eval "$(ssh-agent -s)" "
+output: eg. Agent pid 59566
+
+.....then folow the next step
+
+
+step 3:- Copy the file name (id_ed25519.pub) and search in your file manager
+	eg. defult file location will be C:\Users\raviraj kumar\.ssh (May be)
+step 4:- Open (id_ed25519.pub) file in any text editor and copy the text
+step 5:- Open your GitHub profile and click on SETTING  then click on SSH and GPG keys
+step 6:- click on Add SSH key or New SSH key 
+		In Title you may write Ravi's presonal computer
+		IN Key paste the text that you copied in step 4
+step 7:- Add SSH key
