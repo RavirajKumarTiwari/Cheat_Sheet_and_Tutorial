@@ -27,7 +27,8 @@ git checkout <FILE NAME>//back to previous commit
 git checkout -f//back to previous commit for all
 git push//only push in same branch
 
-git commit -a -m "skipped staging area and fixed"//direct commit 
+git commit -a -m "skipped staging area and fixed"//direct commit
+git -am //add and commit 
 git diff //comparing between working tree and staging area
 git diff --staged//comparing the staging area to last commit
 
@@ -40,7 +41,19 @@ git checkout -b <BRANCH NAME>//creat a new branch and switch to that branch
 git checkout <BRANCH NAME>//Switched to another branch 
 git push -u origin <BRANCH NAME>//push branch and also next time push in same branch
 
-git merge <BRANCH NAME>//merge branch to master branch
+git merge <BRANCH NAME which u want to merge>//merge branch to present working branch
+git branch -d <BRANCH NAME> //delete branch
+
+git tag -a <TAG NAME> SHA ID -m <MESSAGE> 
+example : git tag -a beta v1.0 <commit id> -m<message>
+
+git commit --amend //amend the most recent commit
+	-after this command press 'i' to inset your message
+	-press ESC
+	-press :wq ENTER
+
+git revert <SHA ID> //Revert given commit
+git reset --soft <SHA ID> //DELETE commit [DANGER]
 
 git clone <ENTER THE URL> <FILE NAME WHERE CLONE FILE STORE>
 
