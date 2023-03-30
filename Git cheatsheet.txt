@@ -109,3 +109,21 @@ step 6:- click on Add SSH key or New SSH key
 		In Title you may write Ravi's presonal computer
 		IN Key paste the text that you copied in step 4
 step 7:- Add SSH key
+
+
+# vs code setting to ignore some files copy and paste this code in user/setting.json file
+"files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "_ide_helper_models.php": true,
+        "_ide_helper*.php": true,
+        ".vscode": true,
+        ".git/logs": true,
+        ".git": true,
+        "**/.idea": true,
+        ".idea": true,
+    },
